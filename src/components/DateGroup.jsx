@@ -1,10 +1,20 @@
 import Input from './Input';
 
-export default function DateGroup() {
+export default function DateGroup({ handleDateChange }) {
   return (
-    <div className="flex gap-4">
-      <Input label="Start Date" id="startDate" />
-      <Input label="End Date" id="endDate" />
+    <div className="flex justify-between">
+      <Input
+        label="Start Date"
+        id="startDate"
+        type="date"
+        onChangeInput={handleDateChange}
+      />
+      <Input
+        label="End Date"
+        id="endDate"
+        type="date"
+        onChangeInput={handleDateChange}
+      />
     </div>
   );
 }
